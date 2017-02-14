@@ -6,8 +6,14 @@ class NightWriter
   end
 
   def to_braille(input)
-    input.chars.map do |char|
+    input.map do |char|
       @mapper.encode(char)
+    end
+  end
+
+  def to_english(input)
+    input.map do |pair|
+      @mapper.decode(pair)
     end
   end
 end
