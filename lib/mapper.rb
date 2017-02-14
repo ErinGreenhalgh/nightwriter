@@ -28,9 +28,10 @@ class Mapper
     end
 
     def encode(input)
-      mapping = {"a" => ["0.", "..", ".."],
-                 "b" => ["0.", "0.", ".."]}
+      base_characters[input]
+    end
 
-      mapping[input]
+    def decode(input)
+      base_characters.key(input)
     end
 end

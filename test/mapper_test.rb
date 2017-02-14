@@ -18,4 +18,16 @@ class MapperTest < Minitest::Test
     assert_equal dots, result
   end
 
+  def test_it_can_translate_braille_to_a
+    braille = [[1,0], [0, 0], [0, 0]]
+    mapper = Mapper.new
+    result = mapper.decode(braille)
+    assert_equal "a", result
+  end
+
+  
+  # can represent next 10 braille characters
+  # can represent last 10 braille characters
+  # cna represent w
+
 end
