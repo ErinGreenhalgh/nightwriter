@@ -24,10 +24,4 @@ class MapperTest < Minitest::Test
     result = mapper.decode(braille)
     assert_equal "a", result
   end
-
-  
-  # can represent next 10 braille characters
-  # can represent last 10 braille characters
-  # cna represent w
-
 end
